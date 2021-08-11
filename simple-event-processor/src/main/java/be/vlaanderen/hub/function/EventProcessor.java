@@ -3,10 +3,12 @@ package be.vlaanderen.hub.function;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
-public class EventProcessor implements RequestHandler<NotificationEvent, String> {
+import java.util.Map;
+
+public class EventProcessor implements RequestHandler<Map<String, Object>, String> {
     @Override
-    public String handleRequest(NotificationEvent event, Context context) {
-        System.out.println("Received: " + event);
+    public String handleRequest(Map<String, Object> event, Context context) {
+        System.out.println("Received event: " + event);
         return "ok";
     }
 }

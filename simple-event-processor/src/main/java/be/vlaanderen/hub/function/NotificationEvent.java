@@ -13,7 +13,7 @@ public class NotificationEvent {
 
     private String time;
 
-    private String details;
+    private String detail;
 
     @Override
     public String toString() {
@@ -22,7 +22,7 @@ public class NotificationEvent {
                 ", detailType='" + detailType + '\'' +
                 ", source='" + source + '\'' +
                 ", time=" + time +
-                ", details=" + details +
+                ", details=" + detail +
                 '}';
     }
 
@@ -58,11 +58,11 @@ public class NotificationEvent {
         this.time = time;
     }
 
-    public String getDetails() {
-        return details;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setDetails(String details) {
-        this.details = details;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 }
