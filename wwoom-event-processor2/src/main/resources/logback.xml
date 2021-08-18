@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>
+                [%thread] [%logger{36}] - [%d{"yyyy-MM-dd'T'HH:mm:ss.SSSXXX"}] [%-5level] [%X{labels.impactlevel}] [%X{trace.id}] [%X{span.id}] [%X{service.name}] [%X{labels.context}] [%X{labels.contextdetail}] %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="be.vlaanderen" level="debug" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

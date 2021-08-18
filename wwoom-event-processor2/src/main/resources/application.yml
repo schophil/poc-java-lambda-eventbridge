@@ -1,0 +1,21 @@
+debug: false
+
+#server:
+#  port : 9092
+
+spring:
+  application:
+    name: wwoom-event-processor
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          legallogging:
+#            scope: BurgerProfielAudit
+#            client-id: ${GEOSECURE_CLIENT_ID}
+#            client-secret: ${GEOSECURE_CLIENT_SECRET}
+#            authorization-grant-type: client_credentials
+#            provider: geosecure
+#        provider:
+#          geosecure:
+#            token-uri: ${GEOSECURE_TOKEN_URL}
