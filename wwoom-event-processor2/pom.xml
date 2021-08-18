@@ -27,7 +27,6 @@
 
     <dependencies>
 
-
 		<!-- Vlaanderen -->
         <dependency>
             <groupId>be.vlaanderen.burgerprofiel.wwoom.common</groupId>
