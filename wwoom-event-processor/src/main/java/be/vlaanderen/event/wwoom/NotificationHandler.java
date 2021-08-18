@@ -5,6 +5,7 @@ import be.vlaanderen.event.wwoom.web.NotificationController;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.SneakyThrows;
 import org.springframework.context.ApplicationContext;
 
 import java.io.IOException;
@@ -14,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 
 public class NotificationHandler implements RequestStreamHandler {
 
+    @SneakyThrows
     @Override
     public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
         ApplicationContext applicationContext = ContextHolder.getApplicationContext();

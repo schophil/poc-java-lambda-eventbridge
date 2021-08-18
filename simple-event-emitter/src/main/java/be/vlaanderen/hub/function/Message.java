@@ -2,6 +2,7 @@ package be.vlaanderen.hub.function;
 
 public class Message {
     private String id;
+    private String applicationId;
     private String target;
     private String title;
     private String body;
@@ -36,5 +37,13 @@ public class Message {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public String getApplicationId() {
+        return applicationId;
+    }
+
+    public void setApplicationId(String applicationId) {
+        this.applicationId = applicationId;
     }
 }
