@@ -1,49 +1,40 @@
 package be.vlaanderen.hub.function;
 
 public class Message {
-    private String id;
-    private String applicationId;
-    private String target;
-    private String title;
-    private String body;
+    private String notificatieId;
+    private String correlationId;
+    private String clientId;
+    private String onderwerp;
 
-    public String getId() {
-        return id;
+    public String getNotificatieId() {
+        return notificatieId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setNotificatieId(String notificatieId) {
+        this.notificatieId = notificatieId;
     }
 
-    public String getTarget() {
-        return target;
+    public String getCorrelationId() {
+        return correlationId;
     }
 
-    public void setTarget(String target) {
-        this.target = target;
+    public void setCorrelationId(String correlationId) {
+        this.correlationId = correlationId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getClientId() {
+        return clientId;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 
-    public String getBody() {
-        return body;
+    public String getOnderwerp() {
+        return onderwerp;
     }
 
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    public String getApplicationId() {
-        return applicationId;
-    }
-
-    public void setApplicationId(String applicationId) {
-        this.applicationId = applicationId;
+    public void setOnderwerp(String onderwerp) {
+        this.onderwerp = onderwerp;
     }
 }

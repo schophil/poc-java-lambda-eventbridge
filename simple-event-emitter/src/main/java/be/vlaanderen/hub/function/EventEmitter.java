@@ -43,11 +43,10 @@ public class EventEmitter implements RequestHandler<EmitEvents, String> {
 
     private Message generateMessage(EmitEvents emitEvents) {
         Message message = new Message();
-        message.setApplicationId(UUID.randomUUID().toString());
-        message.setId(UUID.randomUUID().toString());
-        message.setTitle(RandomStringUtils.randomAlphabetic(10));
-        message.setBody(RandomStringUtils.randomAlphabetic(100));
-        message.setTarget(Optional.ofNullable(emitEvents.getTarget())
+        message.setCorrelationId(UUID.randomUUID().toString());
+        message.setNotificatieId(UUID.randomUUID().toString());
+        message.setOnderwerp(RandomStringUtils.randomAlphabetic(10));
+        message.setClientId(Optional.ofNullable(emitEvents.getTarget())
                 .orElseGet(() -> RandomStringUtils.random(5).toUpperCase()));
         return message;
     }
